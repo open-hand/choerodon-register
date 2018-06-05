@@ -23,7 +23,6 @@ maven-test-docker:
   script:
     - update_pom_version
     - mvn package -U -DskipTests=false
-    - mvn --batch-mode verify sonar:sonar -Dsonar.host.url=${SONAR_URL} -Dsonar.analysis.serviceGroup=${GROUP_NAME} -Dsonar.analysis.commitId=${CI_COMMIT_SHA}
     - cache_jar
   only:
     - tags
