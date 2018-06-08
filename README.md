@@ -11,6 +11,10 @@
 ## Dependencies
 - Kafka 
 
+## Links
+
+* [Change Log](./CHANGELOG.zh-CN.md)
+
 ## Reporting Issues
 
 If you find any shortcomings or bugs, please describe them in the [issue](https://github.com/choerodon/choerodon/issues/new?template=issue_template.md).
