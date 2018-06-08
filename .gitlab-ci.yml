@@ -37,6 +37,8 @@ docker-build:
   stage: docker-build
   script:
     - docker_build
+    - clean_cache
+
   only:
     - tags
     - develop
