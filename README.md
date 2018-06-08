@@ -1,27 +1,26 @@
-# eureka-server
-> eureka registration center, for local testing only, please using go-register-server if you are online. The API send the message of server starting to "register-server" topic of kafka, after receiving the message, manager-service do the corresponding processing, such as refresh permissions. 
+# Eureka Server
+
+ Eureka registration center, for local testing only, please using [go-register-server](https://github.com/choerodon/go-register-server) if you are online. Registration center will send the message to kafka of topic `register-server` when a service up, after receiving the message, [manager-service](https://github.com/choerodon/manager-service) do the corresponding processing, such as refresh permissions. 
 
 ## Requirements
-- need to use together with kafka
-
-## To get the code
-
-```
-git clone https://github.com/choerodon/eureka-server.git
-```
+- Need to use together with Kafka.
 
 ## Installation and Getting Started
-- switch to the directory of project, run mvn spring-boot:run or running in EurekaServerApplication, which running in idea.
+- Switch to the directory of project, run `mvn spring-boot:run` or running in `EurekaServerApplication`, which running in idea.
 
 ## Dependencies
-- kafka
+- Kafka 
+
+## Links
+
+* [Change Log](./CHANGELOG.zh-CN.md)
 
 ## Reporting Issues
 
-If you find any shortcomings or bugs, please describe them in the Issue.
+If you find any shortcomings or bugs, please describe them in the [issue](https://github.com/choerodon/choerodon/issues/new?template=issue_template.md).
     
 ## How to Contribute
-Pull requests are welcome! Follow this link for more information on how to contribute.
+Pull requests are welcome! [Follow](https://github.com/choerodon/choerodon/blob/master/CONTRIBUTING.md) to know for more information on how to contribute.
 
 ## Note
-- For local testing only
+- For local testing only.

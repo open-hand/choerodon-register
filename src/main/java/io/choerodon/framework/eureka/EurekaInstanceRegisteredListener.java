@@ -31,7 +31,7 @@ public class EurekaInstanceRegisteredListener implements ApplicationListener<Eur
 
 
     @Autowired
-    private KafkaTemplate kafkaTemplate;
+    private KafkaTemplate<byte[], byte[]> kafkaTemplate;
 
     @Override
     public void onApplicationEvent(EurekaInstanceRegisteredEvent eurekaInstanceRegisteredEvent) {
@@ -51,6 +51,5 @@ public class EurekaInstanceRegisteredListener implements ApplicationListener<Eur
             }
         }
     }
-
 
 }
