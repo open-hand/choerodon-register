@@ -39,6 +39,13 @@ env:
     # 本实例管理端口
     MANAGEMENT_SERVER_PORT: 8031
 
+    # 检索服务选项，注册中心不需要检索服务
+    EUREKA_CLIENT_FETCH_REGISTRY: false
+    # 注册中心将自己作为客户端来尝试注册自己，注册中心集群环境下需开启此配置
+    EUREKA_CLIENT_REGISTER_WITH_EUREKA: false
+    # 注册服务地址
+    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://register-server:8000/eureka/
+
     # 是否启用配置中心
     SPRING_CLOUD_CONFIG_ENABLED: true
     # 配置中心地址
@@ -51,20 +58,18 @@ env:
     # Redis db
     SPRING_REDIS_DATABASE: 2
 
-    # 注册服务地址
-    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://register-server:8000/eureka/
+    # 推荐 JVM 配置
+    JAVA_OPTS: >
+      -Xms1024m
+      -Xmx1536m
 
-    # 忽略jwt的url
-    CHOERODON_RESOURCE_JWT_IGNORE: /favicon.ico
+    ## Skywalking 配置参数
+    # SKYWALKING_OPTS: >-
+    #   -javaagent:/agent/skywalking-agent.jar
+    #   -Dskywalking.agent.application_code=asgard-service
+    #   -Dskywalking.agent.sample_n_per_3_secs=-1
+    #   -Dskywalking.collector.backend_service=oap.skywalking:11800
 
-    # 清理permission表中的旧接口和role_permission表中角色和权限层级不匹配的脏数据
-    CHOERODON_CLEANPERMISSION: false
-
-    # 网关地址
-    CHOERODON_GATEWAY_URL: http://api.example.com
-
-    #用户默认密码
-    CHOERODON_USER_DEFAULT_PASSWORD: abcd1234
 
 ## Liveness 和 Readiness 探针相关配置
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
