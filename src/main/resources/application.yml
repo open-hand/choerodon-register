@@ -1,8 +1,8 @@
 eureka:
   instance:
     preferIpAddress: true
-    leaseRenewalIntervalInSeconds: 10
-    leaseExpirationDurationInSeconds: 30
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 4
     metadata-map:
       VERSION: 1.3.0
   client:
