@@ -15,5 +15,7 @@ eureka:
     registryFetchIntervalSeconds: 10
     disable-delta: true
   server:
-    evictionIntervalTimerInMs: 4000
+    evictionIntervalTimerInMs: 3000
     enable-self-preservation: ${EUREKA_SERVER_ENABLE_SELF_PRESERVATION:false}
+    response-cache-update-interval-ms: 3000
+    response-cache-auto-expiration-in-seconds: 180
