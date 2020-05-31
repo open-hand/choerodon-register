@@ -100,14 +100,14 @@ resources:
 ## 插件相关配置
 plugins:
   # skywalking agent 镜像地址
-  skywalkingAgentImage: registry.cn-shanghai.aliyuncs.com/c7n/skywalking-agent:6.5.0
+  skywalkingAgentImage: registry.cn-shanghai.aliyuncs.com/c7n/skywalking-agent:6.6.0
 
 ## service 相关设置
 ## ref: http://kubernetes.io/docs/user-guide/services/
 ##
 service:
   # 是否启用 service 暴露本服务
-  enabled: true
+  enabled: false
   # Service 名称
   name: hzero-register
   # Service 类型
