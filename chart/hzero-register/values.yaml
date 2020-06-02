@@ -44,19 +44,7 @@ env:
     # 注册中心将自己作为客户端来尝试注册自己，注册中心集群环境下需开启此配置
     EUREKA_CLIENT_REGISTER_WITH_EUREKA: false
     # 注册服务地址
-    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://register-server:8000/eureka/
-
-    # 是否启用配置中心
-    SPRING_CLOUD_CONFIG_ENABLED: true
-    # 配置中心地址
-    SPRING_CLOUD_CONFIG_URI: http://register-server:8000
-
-    # Redis 主机地址
-    SPRING_REDIS_HOST: localhost
-    # Redis 端口
-    SPRING_REDIS_PORT: 6379
-    # Redis db
-    SPRING_REDIS_DATABASE: 2
+    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://hzero-register:8000/eureka/
 
     # 推荐 JVM 配置
     JAVA_OPTS: >
