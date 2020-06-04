@@ -47,7 +47,7 @@ env:
     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://hzero-register:8000/eureka/
 
     # 推荐 JVM 配置
-    JAVA_OPTS: >
+    JAVA_OPTS: >-
       -Xms1024m
       -Xmx1536m
 
