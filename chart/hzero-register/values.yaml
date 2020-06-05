@@ -35,9 +35,9 @@ podLabels: {}
 env:
   open:
     # 本实例服务端口
-    SERVER_PORT: 8030
+    SERVER_PORT: 8000
     # 本实例管理端口
-    MANAGEMENT_SERVER_PORT: 8031
+    MANAGEMENT_SERVER_PORT: 8001
 
     # 检索服务选项，注册中心不需要检索服务
     EUREKA_CLIENT_FETCH_REGISTRY: false
@@ -47,9 +47,9 @@ env:
     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://hzero-register:8000/eureka/
 
     # 推荐 JVM 配置
-    JAVA_OPTS: >-
-      -Xms1024m
-      -Xmx1536m
+#    JAVA_OPTS: >-
+#      -Xms1024m
+#      -Xmx1536m
 
     ## Skywalking 配置参数
     # SKYWALKING_OPTS: >-
@@ -95,7 +95,7 @@ plugins:
 ##
 service:
   # 是否启用 service 暴露本服务
-  enabled: false
+  enabled: true
   # Service 名称
   name: hzero-register
   # Service 类型
@@ -107,18 +107,34 @@ service:
     # 服务端口
     http: 
       port: 8000
-      nodePort: 30092
+      nodePort: 30090
     # 管理端口
     actuator: 
       port: 8001
-      nodePort: 30093
+      nodePort: 30091
   ## externalIPs 设置
   # externalIPs:
   #   - externalIp1
   annotations: {}
     # prometheus.io/scrape: 'true'
     # prometheus.io/path: '/actuator/prometheus'
-    # prometheus.io/port: '8031'
+    # prometheus.io/port: '8001'
+
+## Ingress 相关配置
+## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
+##
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+    # nginx.ingress.kubernetes.io/whitelist-source-range: 0.0.0.0/0
+  path: /
+  host: api.example.com
+  tls: []
+  # - secretName: api-example-tls
+  #   hosts:
+  #   - api.example.com
 
 ## 指标收集
 metrics:
