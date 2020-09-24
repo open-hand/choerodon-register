@@ -1,10 +1,9 @@
 # choerodon-register
+注册中心
 
 ## Introduction
-基于Eureka的平台注册中心服务。本服务依赖[hzero-regiser](https://github.com/open-hand/hzero-register.git)未进行特性化开发。
 
-## Documentation
-- [中文文档](http://open.hand-china.com/document-center/doc/application/10031/10156?doc_id=4811)
+基于Eureka的平台注册中心服务。本服务依赖[hzero-regiser](https://github.com/open-hand/hzero-register.git)未进行特性化开发。
 
 ## Features
 
@@ -13,11 +12,14 @@
 - 服务监控
 - 注册中心其他功能
 
-## 更新日志
+## Documentation
+- 更多详情请参考`hzero-register`[中文文档](http://open.hand-china.com/document-center/doc/application/10031/10156?doc_id=4811)
+
+## Changelog
 
 * [更新日志](./CHANGELOG.zh-CN.md)
 
-## 依赖
+## Dependencies
 
 * 依赖服务
 
