@@ -4,7 +4,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 4
     metadata-map:
-      VERSION: 1.4.0
+      VERSION: 0.23.1.RELEASE
   client:
     # 检索服务选项，注册中心不需要检索服务
     fetch-registry: ${EUREKA_CLIENT_FETCH_REGISTRY:false}

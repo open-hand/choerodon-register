@@ -8,9 +8,9 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>hzero-register</artifactId>
-    <version>0.23.0.RELEASE</version>
-    <name>hzero-register</name>
+    <artifactId>choerodon-register</artifactId>
+    <version>0.23.1.RELEASE</version>
+    <name>choerodon-register</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
