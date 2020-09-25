@@ -44,7 +44,7 @@ env:
     # 注册中心将自己作为客户端来尝试注册自己，注册中心集群环境下需开启此配置
     EUREKA_CLIENT_REGISTER_WITH_EUREKA: false
     # 注册服务地址
-    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://hzero-register:8000/eureka/
+    EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://choerodon-register:8000/eureka/
 
     # 推荐 JVM 配置
 #    JAVA_OPTS: >-
@@ -97,7 +97,7 @@ service:
   # 是否启用 service 暴露本服务
   enabled: true
   # Service 名称
-  name: hzero-register
+  name: choerodon-register
   # Service 类型
   type: ClusterIP
   # 指定 service 的 clusterIP

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: hzero-register
+    name: choerodon-register
 server:
   port: 8000
 management:
