@@ -3,7 +3,7 @@ replicaCount: 1
 
 ## 设置默认的 image、imageTag 和 imagePullPolicy。
 image:
-  repository: registry.cn-shanghai.aliyuncs.com/c7n/hzero-gateway
+  repository: registry.cn-shanghai.aliyuncs.com/c7n/choerodon-register
   tag: ~
   pullPolicy: IfNotPresent
 
