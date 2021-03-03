@@ -9,7 +9,7 @@ spec:
 {{- if (or (eq .Values.service.type "ClusterIP" "") (empty .Values.service.type)) }}
   type: ClusterIP
   {{- if not (empty .Values.service.clusterIP) }}
-  clusterIP: {{ .Values.service.clusterIP }}
+  clusterIP: None
   {{end}}
 {{- else if eq .Values.service.type "LoadBalancer" }}
   type: {{ .Values.service.type }}

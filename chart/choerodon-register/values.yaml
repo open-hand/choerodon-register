@@ -101,7 +101,7 @@ service:
   # Service 类型
   type: ClusterIP
   # 指定 service 的 clusterIP
-  clusterIP: ~
+  clusterIP: None
   # 端口设置
   ports: 
     # 服务端口
