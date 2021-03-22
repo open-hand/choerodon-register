@@ -3,8 +3,9 @@ eureka:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 4
+    # 服务的一些元数据信息
     metadata-map:
-      VERSION: 0.24.0-snapshot
+      VERSION: ${CHART_VERSION:0.24.0-alpha.2-SNAPSHOT}
   client:
     # 检索服务选项，注册中心不需要检索服务
     fetch-registry: ${EUREKA_CLIENT_FETCH_REGISTRY:false}
