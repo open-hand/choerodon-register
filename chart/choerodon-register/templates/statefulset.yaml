@@ -8,7 +8,7 @@ metadata:
 {{ include "service.logging.deployment.label" . | indent 4 }}
 {{- end }}
 spec:
-  serviceName: {{ .Release.Name }}
+  serviceName: {{ .Values.service.name }}-headless
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
